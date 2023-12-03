@@ -1,12 +1,13 @@
-import './App.css';
 // import AnimationLoading from './components/AnimationLoading';
+import AnimationAudio from './components/AnimationAudio';
 import SideBarPage from './pages/SideBarPage';
 
 
 export default function App() {
   return (
-    <div className="App">
-      <SideBarPage />
+    // <SideBarPage />
+    <div>
+      <AnimationAudio />
     </div>
   );
 }
