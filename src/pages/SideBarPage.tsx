@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import AnimationSideBar from "../components/AnimationSideBar";
 import { motion } from "framer-motion";
+import { SideBarItem } from "../types/app";
+import AnimationSideBarItem from "../components/AnimationSideBarItem";
 
 export default function SideBarPage() {
   const [isShow, setIsShow] = React.useState(false);
@@ -14,9 +16,31 @@ export default function SideBarPage() {
     setIsShow(prev => !prev);
   };
 
+  const sidebarData: SideBarItem[] = [
+    {
+      icon: '🗺️',
+      label: '네이버'
+    }, {
+      icon: '🎪',
+      label: '다음'
+    }, {
+      icon: '✏️',
+      label: '카카오'
+    }
+  ];
+
   return (
     <S.SideBarPage>
-      <AnimationSideBar isShow={isShow} handleClosed={handleClosed}><div></div></AnimationSideBar>
+      <AnimationSideBar isShow={isShow} handleClosed={handleClosed}>
+        {
+          sidebarData.map((sidebar) => 
+            <AnimationSideBarItem 
+              isShow={isShow} 
+              icon={sidebar.icon}>
+              {sidebar.label}
+            </AnimationSideBarItem>)
+        }
+      </AnimationSideBar>
       <motion.div 
         className="main" 
         initial={false}

@@ -15,6 +15,9 @@ export default function AnimationSideBar({ isShow, handleClosed, children }: Pro
       initial={false}
       animate={{x: isShow ? '0vw' : '-17vw'}}
       transition={{ ease: "easeOut" }}>
+      <div className="side-bar-header">
+        <button onClick={handleClosed}>닫기</button>
+      </div>
       { children }
     </S.AnimationSideBar>
   );
@@ -23,7 +26,13 @@ export default function AnimationSideBar({ isShow, handleClosed, children }: Pro
 const S = {
   AnimationSideBar: styled(motion.div)`
     background-color: skyblue;
-    width: 20vw;
-    height: 100vh;
+    width: calc(20vw - 40px);
+    height: calc(100vh - 40px);
+    padding: 20px;
+    .side-bar-header {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 4rem;
+    }
   `,
 };
