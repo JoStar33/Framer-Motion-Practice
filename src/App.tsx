@@ -5,13 +5,14 @@ import AnimationChat from './components/AnimationChat';
 import SideBarPage from './pages/SideBarPage';
 import ScrollBlockPage from './pages/ScrollBlockPage';
 import BallPage from './pages/BallPage';
+import BlockChatPage from './pages/BlockChatPage';
 
 
 export default function App() {
   return (
     // <SideBarPage />
     <S.App>
-      <BallPage/>
+      <BlockChatPage/>
     </S.App>
   );
 }
