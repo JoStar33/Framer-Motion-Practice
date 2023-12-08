@@ -10,7 +10,7 @@ export default function AnimationChatElement({ valueRef }: IAnimationChatElement
   const animateMotion = React.useMemo(() => {
     console.log(valueRef.current?.getBoundingClientRect().top);
     return {
-      y: [630 - (valueRef.current?.getBoundingClientRect().top ?? 0), 0],
+      y: [690 - (valueRef.current?.getBoundingClientRect().top ?? 0), 0],
       transition: {
         type: 'spring',
         duration: 1.5,
@@ -24,10 +24,12 @@ export default function AnimationChatElement({ valueRef }: IAnimationChatElement
       animate={animateMotion} >
         <motion.p
           initial={{
-            width: 300
+            width: 300,
+            scaleY: 0,
           }}
           animate={{
             width: "auto",
+            scaleY: 1,
             borderRadius: 5,
             transition: {
               duration: 0.3,

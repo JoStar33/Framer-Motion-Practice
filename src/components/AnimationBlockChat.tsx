@@ -36,6 +36,19 @@ const S = {
       width: 300px;
       height: 600px;
       border: 1px solid black;
+      ::-webkit-scrollbar {
+        display: none;
+        width: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        display: none;
+        background-color: #5f5f5f;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        display: none;
+        background-color: #cecece;
+      }
     }
     .chat-container {
       width: 100%;
