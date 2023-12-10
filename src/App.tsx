@@ -7,13 +7,14 @@ import styled from 'styled-components';
 // import BallPage from './pages/BallPage';
 // import BlockChatPage from './pages/BlockChatPage';
 import AnimationDisappear from './components/AnimationDisappear';
+import AnimationCurtain from './components/AnimationCurtain';
 
 
 export default function App() {
   return (
     // <SideBarPage />
     <S.App>
-      <AnimationDisappear />
+      <AnimationCurtain />
     </S.App>
   );
 }
