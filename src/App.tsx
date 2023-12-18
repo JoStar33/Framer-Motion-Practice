@@ -15,7 +15,7 @@ export default function App() {
   return (
     // <SideBarPage />
     <S.App>
-      <AnimationCardMove cards={[]} />
+      <AnimationCardMove cards={['a', 'a', 'a', 'a']} />
     </S.App>
   );
 }
