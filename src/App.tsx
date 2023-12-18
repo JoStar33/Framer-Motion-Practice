@@ -8,13 +8,14 @@ import styled from 'styled-components';
 // import BlockChatPage from './pages/BlockChatPage';
 import AnimationDisappear from './components/AnimationDisappear';
 import AnimationCurtain from './components/AnimationCurtain';
+import AnimationCardMove from './components/AnimationCardMove';
 
 
 export default function App() {
   return (
     // <SideBarPage />
     <S.App>
-      <AnimationCurtain />
+      <AnimationCardMove cards={[]} />
     </S.App>
   );
 }
