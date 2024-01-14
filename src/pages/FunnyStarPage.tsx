@@ -6,13 +6,13 @@ export default function FunnyStarPage() {
   return (
     <S.FunnyStarPage>
       <AnimationStar
-        rotate={[0, 80, 0, 80, 0, -80, 0]}
+        rotate={[0, -130, 0, -130, 0, 130, 0]}
         scale={[0, 3, 0.5, 2, 0.8, 1]}
         top={200}
         left={1000}
       />
       <AnimationStar
-        rotate={[0, 80, 0, 80, 0, -80, 0]}
+        rotate={[0, 360, 0]}
         scale={[2, 0.5, 1.5, 0.8, 1]}
         top={50}
         left={100}
