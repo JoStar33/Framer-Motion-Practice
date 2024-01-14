@@ -3,29 +3,29 @@ import styled from "styled-components";
 
 export default function AnimationBall() {
   const list = {
-    xMove: { 
+    xMove: {
       x: [500, -500, 500],
       transition: {
         duration: 4,
-        repeat: Infinity
+        repeat: Infinity,
       },
     },
-    yMove: { 
-      y: [0, -300, 0], 
+    yMove: {
+      y: [0, -300, 0],
       transition: {
         duration: 0.5,
-        repeat: Infinity
+        repeat: Infinity,
       },
     },
-  }
-  
+  };
+
   return (
     <S.AnimationBall
       animate={["xMove", "yMove"]}
-      variants={list}>
-    </S.AnimationBall>
+      variants={list}
+    ></S.AnimationBall>
   );
-};
+}
 
 const S = {
   AnimationBall: styled(motion.div)`
