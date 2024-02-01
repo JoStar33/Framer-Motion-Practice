@@ -1,22 +1,51 @@
-import { HTMLMotionProps, MotionValue, easeOut, motion, useTransform } from "framer-motion";
+import {
+  HTMLMotionProps,
+  MotionValue,
+  easeIn,
+  easeOut,
+  motion,
+  useTransform,
+} from "framer-motion";
 import styled from "styled-components";
 
-interface Props extends HTMLMotionProps<"div">{
+interface Props extends HTMLMotionProps<"div"> {
   scrollYProgress: MotionValue<number>;
   cardId: number;
   cardLength: number;
 }
 
-export default function AnimationCard({cardId, cardLength, scrollYProgress, ...rest}: Props) {
+export default function AnimationCard({
+  cardId,
+  cardLength,
+  scrollYProgress,
+  ...rest
+}: Props) {
   const timeValue = 1 / cardLength;
-  const y = useTransform(scrollYProgress, [cardId * timeValue, (cardId + 1) * timeValue], [300, -600], { ease: easeOut });
-  const x = useTransform(scrollYProgress, [cardId * timeValue, (cardId + 1) * timeValue], ['calc(50% - 125px)', 'calc(100% - 125px)'], { ease: easeOut });
+  const y = useTransform(
+    scrollYProgress,
+    [cardId * timeValue, (cardId + 1) * timeValue],
+    [300, -600],
+    { ease: easeIn }
+  );
+  const x = useTransform(
+    scrollYProgress,
+    [cardId * timeValue, (cardId + 1) * timeValue],
+    ["calc(50% - 125px)", "calc(100% - 125px)"],
+    { ease: easeOut }
+  );
+
+  const rotate = useTransform(
+    scrollYProgress,
+    [cardId * timeValue, (cardId + 1) * timeValue],
+    [0, 60],
+    { ease: easeOut }
+  );
   return (
-    <S.AnimationCard style={{top: y, left: x}} {...rest}>
+    <S.AnimationCard style={{ top: y, left: x, rotate: rotate }} {...rest}>
       AnimationCard
     </S.AnimationCard>
   );
-};
+}
 
 const S = {
   AnimationCard: styled(motion.div)`
