@@ -8,12 +8,13 @@ import styled from "styled-components";
 // import BlockChatPage from "./pages/BlockChatPage";
 // import FunnyStarPage from "./pages/FunnyStarPage";
 import HeartBeatingPage from "./pages/HeartBeatingPage";
+import AnimationPlayButton from "./components/AnimationPlayButton";
 
 export default function App() {
   return (
     // <SideBarPage />
     <S.App>
-      <HeartBeatingPage />
+      <AnimationPlayButton />
     </S.App>
   );
 }
