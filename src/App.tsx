@@ -9,21 +9,22 @@ import styled from "styled-components";
 // import FunnyStarPage from "./pages/FunnyStarPage";
 import HeartBeatingPage from "./pages/HeartBeatingPage";
 import AnimationPlayButton from "./components/AnimationPlayButton";
+import ScrollAnimation from "./components/ScrollAnimation";
 
 export default function App() {
   return (
     // <SideBarPage />
     <S.App>
-      <AnimationPlayButton />
+      <ScrollAnimation />
     </S.App>
   );
 }
 
 const S = {
   App: styled.div`
-    height: 100vh;
+    /* height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   `,
 };
