@@ -36,6 +36,13 @@ export default function ScrollAnimation() {
       <motion.div style={{ y: y1 }} className="animate-scroll-background" />
       <motion.div style={{ y: y2 }} className="animate-scroll-block" />
       <motion.div style={{ y: y3, x: 200 }} className="animate-scroll-block" />
+
+      <div className="bg-video">
+        <video className="bg-video__content" autoPlay muted loop>
+          <source src="/test-video.mp4" type="video/mp4" />
+          Your browser is not supported!
+        </video>
+      </div>
     </S.ScrollAnimation>
   );
 }
@@ -44,6 +51,7 @@ const S = {
   ScrollAnimation: styled.div`
     width: 100vw;
     height: 30000px;
+    position: relative;
     .animate-scroll-background {
       width: 100%;
       position: fixed;
@@ -74,6 +82,21 @@ const S = {
         background-color: #8cff21;
         border-radius: 20px;
       }
+    }
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      z-index: -1;
+      opacity: 0.15;
+    }
+
+    .bg-video__content {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
   `,
 };
