@@ -10,12 +10,13 @@ import styled from "styled-components";
 import HeartBeatingPage from "./pages/HeartBeatingPage";
 import AnimationPlayButton from "./components/AnimationPlayButton";
 import ScrollAnimation from "./components/ScrollAnimation";
+import ScrollTestPage from "./pages/ScrollTestPage";
 
 export default function App() {
   return (
     // <SideBarPage />
     <S.App>
-      <ScrollAnimation />
+      <ScrollTestPage />
     </S.App>
   );
 }
