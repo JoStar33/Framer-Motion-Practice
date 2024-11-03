@@ -12,12 +12,13 @@ import AnimationPlayButton from "./components/AnimationPlayButton";
 import ScrollAnimation from "./components/ScrollAnimation";
 import ScrollTestPage from "./pages/ScrollTestPage";
 import AnimationHook from "./components/AnimationHook";
+import AnimationDrag from "./components/AnimationDrag";
 
 export default function App() {
   return (
     // <SideBarPage />
     <S.App>
-      <AnimationHook />
+      <AnimationDrag />
     </S.App>
   );
 }
